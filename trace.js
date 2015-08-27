@@ -1,4 +1,5 @@
 var util = require('util');
+var _ = require("lodash");
 
 function Trace(module) {
   this.module = module;
@@ -19,7 +20,9 @@ Trace.prototype.toString = function toString(stack) {
     current = current.parent;
   }
 
-  return out.join('\n');
+  return _.filter(out, function(line) {
+    return line.trim().length > 0;
+  }).join('\n');
 }
 
 Trace.prototype.__format = function __format(stack) {
