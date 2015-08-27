@@ -10,6 +10,7 @@
     "url": "git://github.com/groundwater/node-stackup.git"
   },
   "dependencies": {
-    "async-listener": "~0.4.7"
+    "async-listener": "~0.4.7",
+    "lodash": "^3.10.1"
   }
 }
