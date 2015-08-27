@@ -27,7 +27,6 @@ Trace.prototype.__format = function __format(stack) {
 
   // get rid of [object Object] line
   split.shift();
-  split.unshift('    ---- async ----');
 
   return this.__filter(split).join('\n');
 }
